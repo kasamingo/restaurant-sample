@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>レストラン</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="main.js"></script>
+</head>
+
+<body>
+
+
+    <img src="rest (1).png" alt="" class="fix-img">
+    <h1 class="fix-store">Restaurant</h1>
+
+
+
+
+    <header>
+        <div class="header-wrap">
+            <div class="header-logo">
+                <img src="logo_black.png" alt="">
+            </div>
+            <nav>
+                <button class="current" id="home">Home</button>
+                <button id="about">About</button>
+                <button id="news">News</button>
+                <button id="menu">Menu</button>
+                <button id="contact">Contact</button>
+            </nav>
+
+            <div class="pre">
+                <p>〒110-0015 東京都台東区18 東上野3-18-1</p>
+            </div>
+        </div>
+        <div class="about-wrapper">                                                   
+            <h1 class="fadein_2">Store Interior</h1>
+            <div class="store-w">
+                <div class="img-w">
+                    <img class="fadein_2" src="inside.png" alt=""><br>
+                </div>
+                <div class="text-r fadein_2">
+                    ハーシーで屈指の歴史ある個人経営レストラン。<br> 83年以上も地元で人気のスポットです。 <br>デアンジェリス・スパゲティソースや「逆さピザ」が評判で、
+                    <br>シーフードやステーキ、パスタなど、<br>自家製の美味しいイタリア料理を提供しています。 <br>充実したパブメニューと各種サンドイッチをご用意しているほか、
+                    <br>終日、深夜までフルメニューを提供しています。<br> 週末には、バーでエンターテインメントも楽しめます。 <br>ハーシー劇場のスターやキャスト、有名人も来店。
+                    <br>チョコレートアベニューの<br>ハーシー・ストーリー・ミュージアムの真向かいにある便利な立地です。
+                </div>
+            </div>
+        </div>
+
+        <div class="menu-wrapper">
+            <h1>Menu</h1>
+            <div class="container">
+                <img class="item" src="menu1.png" alt="">
+                <img class="item" src="menu2.png" alt="">
+                <img class="item" src="menu3.png" alt="">
+                <img class="item" src="menu4.png" alt="">
+                <img class="item" src="menu5.png" alt="">
+                <img class="item" src="menu6.png" alt="">
+            </div>
+        </div>
+
+
+
+        <div class="contact-wrapper">
+            <h1>Contact</h1>
+            <input class="name" type="text"placeholder="名"><br>
+            <input class="u-name" type="text" placeholder="姓"><br>
+            <input class="adress" type="text" placeholder="メールアドレス"><br>
+            <input class="phone" type="text" placeholder="電話番号"><br>
+            <textarea placeholder="メッセージを入力してください" id="" cols="75" rows="10"></textarea><br>
+            <button>送信</button>
+        </div>
+
+
+        <div class="news-wrapper">
+            <h1>News</h1>
+            <p>texttexttexttexttexttexttexttexttexttexttexttexttexttext</p>
+            <p>texttexttexttexttexttexttexttexttexttexttexttexttexttext</p>
+            <p>texttexttexttexttexttexttexttexttexttexttexttexttexttext</p>
+            <p>texttexttexttexttexttexttexttexttexttexttexttexttexttext</p>
+            <p>texttexttexttexttexttexttexttexttexttexttexttexttexttext</p>
+            <p>texttexttexttexttexttexttexttexttexttexttexttexttexttext</p>
+            <p>texttexttexttexttexttexttexttexttexttexttexttexttexttext</p>
+            <p>texttexttexttexttexttexttexttexttexttexttexttexttexttext</p>
+            <p>texttexttexttexttexttexttexttexttexttexttexttexttexttext</p>
+            <p>texttexttexttexttexttexttexttexttexttexttexttexttexttext</p>
+            <p>texttexttexttexttexttexttexttexttexttexttexttexttexttext</p>
+        </div>
+
+
+
+    </header>
+
+
+    <div class="movie-wrapper">
+        <video src="sample_food.mp4" width="100%" autoplay loop muted></video>
+    </div>
+
+
+    <div class="footer-f">
+        <h1>メルマガ配信中</h1>
+        <input type="text" placeholder="メールアドレス入力"><button>参加</button>
+        <p class="copy"><small>&copy;Wevies CO.,Ltd</small></p>
+    </div>
+
+
+
+
+    <!---------------------------------------------------ここからはボタンクリック--->
+    
+
+
+    <div class="home-wrapper">
+
+    </div>
+
+    
+    
+
+
+    <div class="clear">
+        <p></p>
+    </div>
+
+
+
+    <!---------------------------------------------------ここからはボタンクリック--->
+
+
+
+
+
+
+    <script>
+        const aboutBtn = document.querySelector('#about');
+        const menuBtn = document.querySelector('#menu');
+        const homeBtn = document.querySelector('#home');
+        const contactBtn = document.querySelector('#contact');
+        const newsBtn = document.querySelector('#news')
+        const menu = document.querySelector('.menu-wrapper');
+        const about = document.querySelector('.about-wrapper');
+        const home = document.querySelector('.home-wrapper');
+        const contact = document.querySelector('.contact-wrapper');
+        const news = document.querySelector('.news-wrapper');
+        const active = document.querySelector('.active');
+
+
+        aboutBtn.addEventListener('click', () => {
+            menu.classList.remove('active');
+            news.classList.remove('active');
+            contact.classList.remove('active');
+            about.classList.add('active');
+            
+            about.animate(
+                {
+                    opacity:[
+                        0.5,
+                        1.0
+                    ]
+                },
+                {
+                    duration: 1500,
+                    fill:'forwards',
+                    easing:'ease'
+                }
+            );
+
+
+        })
+
+        menuBtn.addEventListener('click',() => {
+            about.classList.remove('active');
+            news.classList.remove('active');
+            contact.classList.remove('active');
+            menu.classList.add('active');
+
+
+            menu.animate(
+                {
+                    transform:[
+                        'scale(0.1)',
+                        'scale(1)'
+                    ]
+                },
+                {
+                    duration:2000,
+                    fill:'forwards',
+                    easing:'ease'
+                }
+            );
+
+        })
+
+        homeBtn.addEventListener('click', () => {
+            menu.classList.remove('active');
+            about.classList.remove('active');
+            contact.classList.remove('active')
+            news.classList.remove('news');
+        })
+        
+        contactBtn.addEventListener('click', () => {
+            menu.classList.remove('active');
+            about.classList.remove('active');
+            contact.classList.add('active');
+
+
+            contact.animate(
+                {
+                    opacity:[
+                        0.5,
+                        1.0
+                    ]
+                },
+                {
+                    duration: 1500,
+                    fill:'forwards',
+                    easing:'ease'
+                }
+            );
+        })
+        newsBtn.addEventListener('click',() => {
+            menu.classList.remove('active');
+            about.classList.remove('active');
+            contact.classList.remove('active');
+            news.classList.add('active');
+
+
+            news.animate(
+                {
+                    opacity:[
+                        0.5,
+                        1.0
+                    ]
+                },
+                {
+                    duration: 1500,
+                    fill:'forwards',
+                    easing:'ease'
+                }
+            );
+        })
+    </script>
+
+</body>
+
+</html>
